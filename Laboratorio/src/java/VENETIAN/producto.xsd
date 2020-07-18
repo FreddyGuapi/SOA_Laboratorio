@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<xsd:schema version="1.0"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified">
+    <xsd:element name="empresa">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="razonSocial" type="razonSocialType"/>
+                <xsd:element name="domicilio" type="domicilioType"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:complexType name="razonSocialType">
+        <xsd:sequence>
+            <xsd:element name="nombre" type="xsd:string"/>
+            <xsd:element name="CIF" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="domicilioType">
+        <xsd:sequence>
+            <xsd:element name="calle" type="xsd:string"/>
+            <xsd:element name="numero" type="xsd:string"/>
+            <xsd:element name="piso" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

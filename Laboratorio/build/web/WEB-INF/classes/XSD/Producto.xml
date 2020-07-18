@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<producto xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="ProductoXSD.xsd">
+    
+    EL PRODUCTO DE SUPERMAXI
+    <codigo>123</codigo>
+    <nombre>mantequilla</nombre>
+    <descripcion>
+        <color></color>
+        <peso>14gramos</peso>
+        <fecha_ingreso>2018-11-09</fecha_ingreso>
+    </descripcion>
+</producto>

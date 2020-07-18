@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+      <xs:element name="producto">
+        <xs:complexType mixed="true">
+            <xs:sequence>
+                <xs:element name="codigo" type="xs:int"></xs:element>
+                <xs:element name="nombre" type="xs:string"></xs:element>
+                <xs:element name="descripcion">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="color" type="xs:string" default="AMARILLO"></xs:element>
+                            <xs:element name="peso" type="xs:string" fixed="14gramos"></xs:element>
+                            <xs:element name="fecha_ingreso" type="xs:date"></xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="val" type="xs:integer" use="required"></xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="cantidad">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:int">
+                            <xs:minInclusive value="0"/>
+                            <xs:maxExclusive value="50"/>
+                        </xs:restriction>
+                    </xs:simpleType> 
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:integer"></xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    
+    
+    
+</xs:schema>
